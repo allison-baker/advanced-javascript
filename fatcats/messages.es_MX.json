@@ -1,0 +1,12 @@
+{
+    "help file error": "El archivo de uso no existe.",
+    "path parameter error": "Parámetros de bandera incorrectos para la ruta.",
+    "sort parameter error": "Parámetros de bandera incorrectos para ordenar.",
+    "one of three sort parameter error": "Los parámetros de marca para ordenar solo pueden ser alpha, exten o size.",
+    "threshold parameter error": "Parámetros de bandera incorrectos para el umbral.",
+    "language parameter error": "Parámetros de bandera incorrectos para el idioma.",
+    "locale parameter error": "Parámetros de bandera incorrectos para la configuración regional.",
+    "nonexistent flag error": "La bandera no existe.",
+    "failed to build tree": "No se pudo construir el árbol.",
+    "main error": "No se pudo ejecutar la función principal."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "fatcats",
+  "version": "1.0.0",
+  "description": "For CS 3380 at Utah Valley University.",
+  "main": "fatcats.js",
+  "scripts": {
+    "test": "node fatcats"
+  },
+  "author": "Al Baker",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

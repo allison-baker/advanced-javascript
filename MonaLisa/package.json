@@ -1,0 +1,11 @@
+{
+  "name": "monaLisa-kata",
+  "version": "1.0.0",
+  "description": "MonaLisa kata in JavaScript with Jest",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

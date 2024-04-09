@@ -1,0 +1,13 @@
+{
+  "name": "scraper",
+  "description": "For CS 3380 at Utah Valley University.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Al Baker",
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^22.6.2"
+  }
+}

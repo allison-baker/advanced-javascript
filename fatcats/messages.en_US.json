@@ -1,0 +1,12 @@
+{
+    "help file error": "Help file doesn't exist.",
+    "path parameter error": "Incorrect flag parameters for path.",
+    "sort parameter error": "Incorrect flag parameters for sort.",
+    "one of three sort parameter error": "Flag parameters for sort can only be alpha, exten, or size.",
+    "threshold parameter error": "Incorrect flag parameters for threshold.",
+    "language parameter error": "Incorrect flag parameters for language.",
+    "locale parameter error": "Incorrect flag parameters for locale.",
+    "nonexistent flag error": "Flag does not exist.",
+    "failed to build tree": "Failed to build tree.",
+    "main error": "Failed to execute main function."
+}
