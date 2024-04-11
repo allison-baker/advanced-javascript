@@ -84,10 +84,10 @@ async function setFlags() {
           process.exit()
         }
         lang = args[i + 1]
-        
+
         i++
-        break;
-      
+        break
+
       case '-loc':
       case '--locale':
         if (!args[i + 1] || args[i + 1].charAt(0) === '-') {
@@ -97,7 +97,7 @@ async function setFlags() {
         }
         loc = args[i + 1]
         i++
-        break;
+        break
     }
   }
 
@@ -110,7 +110,7 @@ async function setFlags() {
       case '-h':
       case '--help':
         await usage()
-        break;
+        break
 
       case '-p':
       case '--path':
@@ -121,7 +121,7 @@ async function setFlags() {
         }
         startPath = path.resolve(pwd, args[i + 1])
         i++
-        break;
+        break
 
       case '-s':
       case '--sort':
@@ -139,12 +139,12 @@ async function setFlags() {
           process.exit()
         }
         i++
-        break;
+        break
 
       case '-m':
       case '--metric':
         metricFormat = metricSize
-        break;
+        break
 
       case '-t':
       case '--threshold':
@@ -155,15 +155,15 @@ async function setFlags() {
         }
         threshold = args[i + 1]
         i++
-        break;
+        break
 
       case '-lang':
       case '--language':
       case '-loc':
       case '--locale':
         i++
-        break;
-        
+        break
+
       default:
         console.log(chalk.red(msg['nonexistent flag error']))
         await usage()
@@ -432,7 +432,7 @@ main()
 // case '-b':
 // case '--blocksize':
 //   blocksize = 4096
-//   break;
+//   break
 
 /* PLAIN SIZE WITH BLOCK SIZE */
 // const plainSize = (size) => `(${(Math.ceil(size / blocksize) * blocksize).toLocaleString()})`

@@ -40,7 +40,7 @@ class Conjured extends Item {
     }
 }
 
-function passes (sellIn, quality) {
+function passes(sellIn, quality) {
     return {
         name: 'Backstage passes to a TAFKAL80ETC concert',
         sellIn,

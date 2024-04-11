@@ -1,5 +1,5 @@
 function clamp(min, max) {
-    return function(x) {
+    return function (x) {
         if (x < min) return min
         if (x > max) return max
         return x

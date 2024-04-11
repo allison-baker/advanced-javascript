@@ -11,7 +11,7 @@ const bitMask = [
 
 // FIXME:
 function bitArray(bitSize) {
-    const byteSize = Math.ceil(bitSize / 8);
+    const byteSize = Math.ceil(bitSize / 8)
     const bytes = new Uint8Array(byteSize)
 
     return {

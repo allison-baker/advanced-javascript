@@ -66,9 +66,9 @@ for (let char of string) {
 
 // ...using an iterator like this
 let iter = str[Symbol.iterator]()
-while(true) {
+while (true) {
     let result = iter.next()
-    if (result.done) break;
+    if (result.done) break
     let char = result.value
     console.log(char)
 }

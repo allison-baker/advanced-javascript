@@ -4,10 +4,10 @@ const BRIE = 'Aged Brie'
 const CONJURED = 'Conjured'
 
 function clamp(min, max) {
-  return function(x) {
-      if (x < min) return min
-      if (x > max) return max
-      return x
+  return function (x) {
+    if (x < min) return min
+    if (x > max) return max
+    return x
   }
 }
 
@@ -38,7 +38,7 @@ class Shop {
           break
         case PASSES:
           if (item.sellIn > 10) {
-            item.quality ++
+            item.quality++
           } else if (item.sellIn > 5 && item.sellIn <= 10) {
             item.quality += 2
           } else if (item.sellIn > 0 && item.sellIn <= 5) {
@@ -47,7 +47,7 @@ class Shop {
           item.quality = qualityClamp(item.quality)
           break
         case BRIE:
-          if (item.sellIn > 0 ) item.quality++
+          if (item.sellIn > 0) item.quality++
           else item.quality += 2
           item.quality = qualityClamp(item.quality)
           break
