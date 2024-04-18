@@ -1,0 +1,14 @@
+{
+  "name": "hash",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "node index.cjs"
+  },
+  "author": "Al Baker",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "lodash": "^4.17.21",
+    "progress": "^2.0.3"
+  }
+}
