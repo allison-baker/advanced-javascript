@@ -1,14 +1,13 @@
 {
   "name": "hash",
-  "main": "index.cjs",
+  "main": "bankSingle.js",
   "scripts": {
-    "test": "node index.cjs"
+    "test": "node bankSingle"
   },
   "author": "Al Baker",
   "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "lodash": "^4.17.21",
     "progress": "^2.0.3"
   }
 }

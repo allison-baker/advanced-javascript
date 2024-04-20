@@ -1,6 +1,5 @@
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
-// const _ = require('lodash')
 const mcupws = require('./mcupws.json')
 const ProgressBar = require('progress')
 
@@ -35,7 +34,6 @@ function main() {
 
     const bar = new ProgressBar('Progress [:bar] :percent :elapsed :etas', { total: hashes.length })
     console.time('Cracking Hashes')
-    // const cracked = []
 
     for (let hash of hashes) {
         for (let pw of allClearTextPws()) {
@@ -47,7 +45,6 @@ function main() {
         }
     }
 
-    // fs.writeFileSync('hashes.answers.txt', hashes.join('\n'))
     console.log('\nComplete')
     console.timeEnd('Cracking Hashes')
 }
