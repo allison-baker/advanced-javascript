@@ -1,5 +1,6 @@
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
+// const _ = require('lodash')
 const mcupws = require('./mcupws.json')
 const ProgressBar = require('progress')
 
@@ -11,41 +12,44 @@ function* pwsOfLenN(n) {
         return
     }
     for (let char1 of alphabet) {
-        for (let char2 of pwsOfLenN(n-1)) {
+        for (let char2 of pwsOfLenN(n - 1)) {
             yield `${char1}${char2}`
         }
-    
+
     }
 }
 
-function* allClearTextPws() {
+function* allClearTextPws() {   // length 252,219
     yield ''
     yield* mcupws.slice(0, 100)
     yield* pwsOfLenN(1)
-    yield* mcupws.slice(100, 900)
+    yield* mcupws.slice(100, 1000)
     yield* pwsOfLenN(2)
-    yield* mcupws.slice(900)
+    yield* mcupws.slice(1000)
     yield* pwsOfLenN(3)
 }
 
 function main() {
     const allHashes = fs.readFileSync('./hashes.txt', 'utf8').split(/\r?\n/)
     const hashes = allHashes.slice(allHashes.length - 50_000)
-    const bar = new ProgressBar(':bar', { total: hashes.length })
 
-    for (let pw of allClearTextPws()) {
-        for (let hash of hashes) {
+    const bar = new ProgressBar('Progress [:bar] :percent :elapsed :etas', { total: hashes.length })
+    console.time('Cracking Hashes')
+    // const cracked = []
+
+    for (let hash of hashes) {
+        for (let pw of allClearTextPws()) {
             if (bcrypt.compareSync(pw, hash)) {
                 fs.appendFileSync('hashes.answers.txt', `${hash} ${pw === '' ? "''" : pw}\n`)
                 bar.tick()
                 break
             }
         }
-        if (bar.complete) {
-            break
-        }
     }
+
+    // fs.writeFileSync('hashes.answers.txt', hashes.join('\n'))
     console.log('\nComplete')
+    console.timeEnd('Cracking Hashes')
 }
 
 main()
@@ -89,7 +93,20 @@ main()
 // }
 
 // function* pwsUpToLengthN(n) {
-//     for (let i=1; i<=n; i++) {
+//     for (let i = 1; i <= n; i++) {
 //         yield* pwsOfLenN(i)
+//     }
+// }
+
+// for (let pw of allClearTextPws()) {
+//     for (let hash of hashes) {
+//         if (bcrypt.compareSync(pw, hash)) {
+//             cracked.push(`${hash} ${pw === '' ? "''" : pw}`)
+//             bar.tick()
+//             break
+//         }
+//     }
+//     if (bar.complete) {
+//         break
 //     }
 // }
